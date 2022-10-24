@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Learning to Recognize Human Actions From Noisy Skeleton Data Via Noise Adaptation</title>
+    <style type="text/css">
+        body{
+        	background-color: white;
+        }
+        .links{
+        	text-decoration: none;
+        	color: #0066CC;
+        }
+        .p2{
+        	padding-top: 20px;
+        	font-size: 25px;
+        }
+        .p1{
+        	text-align:justify;
+        	text-justify:inter-ideograph;
+        }
+		
+		.left {
+			text-align: left;
+			border: 1px dotted black;
+			width: 50%;
+		}
+        a{
+        	font-family: Sans-serif;
+        }
+        p{
+        	font-family: Sans-serif;
+        }
+        ul{
+        	font-family: Sans-serif;
+        }
+    </style>
+</head>
+<body>
+	<div align="center" style="padding-top: 30px;">
+	<p style="font-size:35px;">Learning to Recognize Human Actions From Noisy
+		Skeleton Data Via Noise Adaptation</p>
+
+	<a href="mailto:ssj940920@pku.edu.cn" class="links">Sijie Song </a> &nbsp; &nbsp; 
+	<a href="mailto:liujiaying@pku.edu.cn" class="links">Jiaying Liu </a> &nbsp; &nbsp; 
+	<a href="mailto:linlilang@pku.edu.cn" class="links">Lilang Lin</a> &nbsp; &nbsp; 
+	<a href="mailto:guozongming@pku.edu.cn" class="links">Zongming Guo</a>
+
+	<br>
+	<!-- <p class="para-3"><span class="font-5">* indicates equal contributions.</span></p> -->
+	<p class="para-3"><span class="p1"> Wangxuan Institute of Computer Technology, Peking University, Beijing.</span></p>
+	
+
+	</div>
+
+	<br>
+        <p class="banner" align="center">Accepted by<em>TMM, 2022</em></p>
+
+	<div align="left" style="padding-left: 15%; padding-right: 15%; padding-bottom: 30px;">
+		<p class='p2'> </p> 
+		<div style="padding-left: 5%; padding-right: 5%;">
+			<div align="center">
+				<img src="images/3.png" width="100%"> <br>
+			</div>
+		<p class='p1'> Figure 1. (a) RGB images, (b) original noisy skeletons, (c) denoised results by R-SD, (d) denoised results by PE-AE, (e) denoised results G-SD, (f) adapted
+			results by G-NAN. The skeletons are slightly rotated around their torsos for better visualization. Though R-SD, PE-AE and G-SD correct noisy skeletal joints
+			marked by green arrows, our adapted results show more discriminative representations for action recognition marked by red arrows.
+		</p>
+		</div>
+
+		<p class='p2'> Abstract </p> 
+		<p class='p1'>Recent studies have made great progress on skeleton-based action recognition. However, most of them are developed with
+			relatively clean skeletons without the presence of intensive noise.
+			We argue that the models learned from relatively clean data are not
+			well generalizable to handle noisy skeletons commonly appeared in
+			the real world. In this paper, we address the challenge of recognizing
+			human actions from noisy skeletons, which is seldom explored
+			by previous methods. Beyond exploring the new problem, we
+			further take a new perspective to address it, i.e., noise adaptation,
+			which gets rid of explicit skeleton noise modeling and reliance on
+			skeleton ground truths. Specifically, we develop regression-based
+			and generation-based adaptation models according to whether
+			pairs of noisy skeletons are available. The regression-based model
+			aims to learn noise-suppressed intrinsic feature representations by
+			mapping pairs of noisy skeletons into a noise-robust space. When
+			only unpaired skeletons are accessible, the generation-based model
+			aims to adapt the features from noisy skeletons to a low-noise
+			space by adversarial learning. To verify our proposed model and
+			facilitate research on noisy skeletons, we collect a new dataset Noisy
+			Skeleton Dataset (NSD), the skeletons of which are with much
+			noise and more similar to daily-life data than previous datasets.
+			Extensive experiments are conducted on the NSD, VV-RGBD and
+			N-UCLA datasets, and results consistently show the outstanding
+			performance of our proposed model.</p>
+		<p class='p2'> Resources </p> 
+		<p class='p1'>
+			<ul style="line-height:15px">
+				<li> Paper: <a href="https://ieeexplore.ieee.org/document/9576640" class="links">PDF</a> </li>
+				<!--<li> Supplementary: <a href="https://drive.google.com/open?id=1QDMWbhw2jgutDsLaS00R-P6cxZ_OaZis" class="links">Google Drive</a>, <a href="https://pan.baidu.com/s/1ke9hqo62pVhl6_6YqAA4cQ" class="links">Baidu Pan</a> (Code: wvr6) </li>-->
+
+				<!-- <li> Dataset can be downloaded here: <a href="https://drive.google.com/file/d/16dUZOh_-hv05wBaZ_BRH_A2_IwTgcN0J/view?usp=sharing" class="links">Google Drive</a>, <a href="https://pan.baidu.com/s/1RkxqFpTdI9eKfrFSJ_UXAw" class="links">Baidu Pan</a> (Code: dzdb) </li> -->
+			</ul>
+		</p>
+
+		<p class='p2'> Citation</p>
+		<p> 
+			@ARTICLE{9576640, <br>
+				&nbsp; &nbsp; author={Song, Sijie and Liu, Jiaying and Lin, Lilang and Guo, Zongming},<br>
+				&nbsp; &nbsp; journal={IEEE Transactions on Multimedia},<br>
+				&nbsp; &nbsp; title={Learning to Recognize Human Actions From Noisy Skeleton Data Via Noise Adaptation}, <br>
+				&nbsp; &nbsp; year={2022}, <br>
+				&nbsp; &nbsp; volume={24}, <br>
+				&nbsp; &nbsp; number={}, <br>
+				&nbsp; &nbsp; pages={1152-1163}, <br>
+			  }
+
+		</p>
+		
+		<p class='p2'> Dataset </p> 
+		<p class='p1'>Our dataset aims to provide noisy skeletons that consistent
+			with those in the real world. The noise in skeletons is largely due
+			to heavy occlusion caused by viewpoints. Thus, we set Microsoft
+			Kinect V2 cameras around the actors. The horizontal angles
+			of each camera are -120&#176 (side view 1), 0&#176 (front view), and
+			+120&#176(side view 2) with the height of 120 cm. Our dataset
+			provide simultaneous color images, depth maps, 3D joints and
+			IR frames. We collect 1,009 untrimmed videos, each of which lasts about
+			1~2 minutes and contains about 7 action instances. In total, there
+			are 6,952 trimmed action clips in 41 action categories. We invite
+			13 subjects and each subject takes part in 4 daily action videos.
+			Some sample frames can be viewed in Fig. 1. The actors perform
+			actions towards a random direction. Thus, in any case, the data
+			from one of the cameras suffer from heavy occlusion and thus
+			noisy skeletons.</p>
+		<div align="center">
+			<img src="images/4.png" width="65%">
+			<p class='p1'> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Figure 2. Average precision on each action category of baseline, R-NAN and G-NAN on the NSD (CS) dataset.</p>
+		</div>
+
+		<p class='p2'> Method </p> 
+
+		<div align="center">
+			<img src="images/2.png" width="95%">
+		</div>
+		<p class='p1'> Figure 3. Instantiations for action recognition from noisy skeletons. (a) Regression-based noise adaptation model. X1 and X2 are observed noisy skeletons for
+			a certain action sequence. (b) Generation-based noise adaptation model. X and Z are noisy and relatively clean skeleton sequences, respectively. (Note we omit
+			some losses for simplicity.).</p>
+
+		<br>
+		
+		<p class='left'>
+			<ul style="line-height:15px">
+				Return to the <a href="http://39.96.165.147/" class="links">home page:</a>
+			</ul>
+		</p>
+		
+
+</html>
